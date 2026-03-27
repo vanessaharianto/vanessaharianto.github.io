@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanessa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <span class="nav-name">V.</span>
+    <div class="nav-links">
+      <a href="#" class="nav-link active" data-page="home">home</a>
+      <a href="#" class="nav-link" data-page="publications">publications</a>
+      <a href="#" class="nav-link" data-page="updates">updates</a>
+      <a href="#" class="nav-link" data-page="contact">contact</a>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <main id="pg-home" class="page active">
+    <div class="hero">
+      <div class="avatar-wrap">
+        <img src="photo.jpeg" alt="Vanessa" class="avatar" id="avatar-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="avatar-fallback" id="avatar-fallback">V</div>
+      </div>
+      <div class="hero-text">
+        <h1 class="hero-name">Vanessa</h1>
+        <p class="hero-role">Undergraduate Researcher &mdash; <em>BINUS University</em></p>
+        <p class="hero-bio">
+          I am a <strong>final-year undergraduate at BINUS University, Indonesia</strong>, majoring in Information Systems
+          and Management. My work focuses on <strong>applying machine learning and natural language processing</strong> to
+          real-world datasets and problem settings, particularly in public sector and large-scale
+          data contexts. I am interested in building data-driven systems that are both practical and socially relevant.
+        </p>
+        <p class="hero-bio">
+          My research has primarily explored <strong>Natural Language Processing</strong>, including sentiment analysis,
+          topic modeling, and predictive systems, with applications such as public service optimization and
+          user behavior analysis. More recently, I have begun investigating <strong>Human Activity Recognition (HAR)</strong>,
+          exploring how language model–based approaches can be extended to time-series and sensor data.
+        </p>
+        <p class="hero-bio">
+          I am particularly interested in understanding human behavior across different data modalities,
+          bridging techniques from NLP and sequence modeling to develop more generalizable and context-aware systems.
+        </p>
+        <p class="hero-bio">
+          Outside of research, I enjoy films, books, food, Formula 1, music, travel, and photography.
+          I like capturing small, everyday moments through photos, and when I’m not glued to my screen,
+          you'll find me wrapped in a blanket, watching a film, reading a book, or happily eating mangoes.
+        </p>
+
+        <div class="cv-section">
+          <span class="links-label">CV</span>
+          <a href="vanessaharianto_cv.pdf" target="_blank" class="pill">Download CV</a>
+        </div>
+
+
+        <div class="links-section">
+          <span class="links-label">find me elsewhere</span>
+
+          <!-- PROFESSIONAL -->
+          <div class="links-group">
+            <span class="links-sub">professional</span>
+            <div class="links-row">
+              <a href="https://linkedin.com/in/vanessaharianto" target="_blank" class="pill">LinkedIn</a>
+              <a href="https://github.com/vanessaharianto" target="_blank" class="pill">GitHub</a>
+              <a href="https://www.researchgate.net/profile/Vanessa-Harianto" target="_blank" class="pill">ResearchGate</a>
+              <a href="https://scholar.google.com/citations?user=ISolQSQAAAAJ&hl=en" target="_blank" class="pill">Scholar</a>
+            </div>
+          </div>
+
+          <!-- PERSONAL / FUN -->
+          <div class="links-group">
+            <span class="links-sub">outside research</span>
+            <div class="links-row">
+              <a href="https://letterboxd.com/mango_slushee" target="_blank" class="pill">Letterboxd</a>
+              <a href="https://www.serializd.com/user/mangoslushee" target="_blank" class="pill">Serializd</a>
+              <a href="https://www.goodreads.com/user/show/199028412" target="_blank" class="pill">Goodreads</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- PUBLICATIONS -->
+  <main id="pg-publications" class="page">
+    <div class="pub-header">
+      <h2 class="page-title">Publications</h2>
+      <div class="filter-row">
+        <button class="filter-btn active" data-filter="featured">featured</button>
+        <button class="filter-btn" data-filter="all">publications</button>
+        <button class="filter-btn" data-filter="other">other works</button>
+      </div>
+    </div>
+
+    <div class="pub-list">
+
+      <div class="pub-card" data-type="featured">
+        <div class="pub-year">2026</div>
+        <div class="pub-body">
+          <div class="pub-title">Leveraging Historical Performance Data to Improve Response Times in Multi-Channel E-Government Complaint Systems</div>
+          <div class="pub-meta">Evaristus Didik Madyatmadja, <strong>Vanessa Elizabeth Harianto</strong>, Daffa Farras Putra Tarigan &middot; IEEE ICECCO 2026 &middot; To appear</div>
+          <div class="pub-tags">
+            <span class="tag">predictive analytics</span>
+            <span class="tag">e-government</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">SHAP</span>
+            <span class="tag">complaint management</span>
+          </div>
+          <div class="pub-links">
+            <!-- to be updated -->
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-type="publication">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <div class="pub-title">Sentiment Analysis of Transjakarta User Feedback Using Machine Learning Models</div>
+          <div class="pub-meta">Evaristus Didik Madyatmadja, Laurensia Jovanka Susanto, Celine Bineva Chandra, Joyceline Laura Amanda, <strong>Vanessa Elizabeth Harianto</strong> &middot; IEEE ICCIT 2025</div>
+          <div class="pub-tags">
+            <span class="tag">sentiment analysis</span>
+            <span class="tag">machine learning</span>
+            <span class="tag">NLP</span>
+            <span class="tag">user feedback</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1109/ICCIT65724.2025.11167507" target="_blank" class="pub-link">DOI &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-type="publication">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <div class="pub-title">Sentiment Analysis of GOJEK User Reviews Using SVM, Naive Bayes, and Random Forest Models</div>
+          <div class="pub-meta">Evaristus Didik Madyatmadja, <strong>Vanessa Elizabeth Harianto</strong>, Antony Willson, Winsen Winsen, Raymond Kent &middot; IEEE ICCIT 2025</div>
+          <div class="pub-tags">
+            <span class="tag">sentiment analysis</span>
+            <span class="tag">SVM</span>
+            <span class="tag">Naive Bayes</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">user reviews</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1109/ICCIT65724.2025.11166956" target="_blank" class="pub-link">DOI &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-type="publication">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <div class="pub-title">Exploring Youth Perspectives on Environmental Sustainability in Social Media Campaigns Using K-Means Clustering and LDA</div>
+          <div class="pub-meta">Evaristus Didik Madyatmadja, <strong>Vanessa Elizabeth Harianto</strong> &middot; IEEE ICoCSETI 2025</div>
+          <div class="pub-tags">
+            <span class="tag">topic modeling</span>
+            <span class="tag">K-Means</span>
+            <span class="tag">LDA</span>
+            <span class="tag">social media</span>
+            <span class="tag">sustainability</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1109/ICoCSETI63724.2025.11019074" target="_blank" class="pub-link">DOI &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pub-card" data-type="publication">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <div class="pub-title">Market Segmentation Analysis for Local Beauty Brands Using Clustering Techniques</div>
+          <div class="pub-meta">Anonymous Authors &middot; In submission</div>
+          <div class="pub-tags">
+            <span class="tag">market segmentation</span>
+            <span class="tag">clustering</span>
+            <span class="tag">business analytics</span>
+          </div>
+          <div class="pub-links">
+          </div>
+        </div>
+      </div>
+      
+      <div class="pub-card" data-type="other">
+        <div class="pub-year">2026</div>
+        <div class="pub-body">
+          <div class="pub-title">Indonesia’s Economy: Unlocking Opportunities in Emerging Markets</div>
+          <div class="pub-meta">
+            Haryadi Sarjono, Ekanaka Hasudungan Pratama, <strong>Vanessa Elizabeth Harianto</strong>, Boyke Setiawan Soeratin
+            &middot; Golden Ratio of Finance Management &middot; January 2026
+          </div>
+          <div class="pub-tags">
+            <span class="tag">economics</span>
+            <span class="tag">emerging markets</span>
+            <span class="tag">finance</span>
+          </div>
+          <div class="pub-links">
+            <a href="https://doi.org/10.52970/grfm.v6i1.1189" target="_blank" class="pub-link">DOI &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- UPDATES -->
+  <main id="pg-updates" class="page">
+    <h2 class="page-title">Updates</h2>
+    <p class="contact-intro">
+      A few recent milestones and things I’ve been working on.
+    </p>
+
+    <div class="updates-list">
+
+      <div class="update-item">
+        <div class="update-date">Apr 2026</div>
+        <div class="update-text">
+          <div class="update-title">
+            Started my semester as a student exchange at the University of Tsukuba, Japan! 
+          </div>
+          <div class="update-desc">
+            [desc here]
+          </div>
+        </div>
+      </div>    
+
+      <div class="update-item">
+        <div class="update-date">Jan 2026</div>
+        <div class="update-text">
+          Paper accepted at IEEE ICECCO 2026 (to appear)
+        </div>
+      </div>
+
+
+      <div class="update-item">
+        <div class="update-date">Jan 2026</div>
+        <div class="update-text">
+          <div class="update-title">
+            Paper Published in <em>Golden Ratio of Finance Management</em>
+            <span class="update-tag">coursework</span>
+          </div>
+          <div class="update-desc">
+            Explored Indonesia’s economic development as an emerging market, focusing on
+            growth trends, foreign investment, and structural challenges over the past decade.
+          </div>
+        </div>
+      </div>    
+
+      <div class="update-item">
+        <div class="update-date">Aug 2025</div>
+        <div class="update-text">
+          <div class="update-title">
+            Paper published at <em>IEEE ICCIT</em>
+          </div>
+          <div class="update-desc">
+            Examined public sentiment on Transjakarta services through Google Play reviews,
+            identifying key issues in service quality, punctuality, and user satisfaction.
+          </div>
+        </div>
+      </div>
+
+      <div class="update-item">
+        <div class="update-date">Aug 2025</div>
+        <div class="update-text">
+          <div class="update-title">
+            Paper published at <em>IEEE ICCIT</em>
+          </div>
+          <div class="update-desc">
+            Analyzed user reviews from the GOJEK application using SVM, Naïve Bayes, and Random Forest
+            to compare model performance and uncover key user sentiment patterns.
+          </div>
+        </div>
+      </div>
+
+      <div class="update-item">
+        <div class="update-date">Jan 2025</div>
+        <div class="update-text">
+          <div class="update-title">
+            Paper published at <em>IEEE ICoCSETI</em>
+          </div>
+          <div class="update-desc">
+            Work on environmental sustainability using K-Means clustering and LDA for social media analysis.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- CONTACT -->
+  <main id="pg-contact" class="page">
+    <h2 class="page-title">Contact</h2>
+    <p class="contact-intro">Feel free to reach out — whether it's about research, collaboration, or just to say hello.</p>
+
+    <div class="contact-grid">
+      <a href="mailto:vanessaelizabeth910@gmail.com" class="contact-card">
+        <span class="contact-icon">&#9993;</span>
+        <div>
+          <div class="contact-label">personal email</div>
+          <div class="contact-sub">vanessaelizabeth910@gmail.com</div>
+        </div>
+      </a>
+      <a href="mailto:vanessa.harianto@binus.ac.id" class="contact-card">
+        <span class="contact-icon">&#9993;</span>
+        <div>
+          <div class="contact-label">school email</div>
+          <div class="contact-sub">vanessa.harianto@binus.ac.id</div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <!-- LIGHTBOX OVERLAY -->
+  <div id="lightbox" class="lightbox" aria-label="Photo fullscreen view" role="dialog">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <img src="photo.jpeg" alt="Vanessa" class="lightbox-img" id="lightbox-img" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
