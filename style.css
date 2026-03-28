@@ -47,6 +47,78 @@ nav {
   letter-spacing: -0.02em;
 }
 
+/* ── Easter egg tooltip ── */
+.easter-tooltip {
+  position: fixed;
+  top: 64px;
+  left: 48px;
+  z-index: 200;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  max-width: 280px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.easter-tooltip.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.easter-tooltip-text {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.easter-tooltip-cite {
+  font-size: 10.5px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.easter-tooltip-wand {
+  font-size: 10px;
+  color: var(--muted);
+  opacity: 0.5;
+  margin-bottom: 6px;
+}
+
+.easter-tooltip.gryffindor {
+  border-color: #7F0909;
+}
+.easter-tooltip.gryffindor .easter-tooltip-wand {
+  color: #AE0001;
+}
+
+.easter-tooltip.slytherin {
+  border-color: #2F855A;
+}
+.easter-tooltip.slytherin .easter-tooltip-wand {
+  color: #38A169;
+}
+
+.easter-tooltip.ravenclaw {
+  border-color: #3B5BDB;
+}
+.easter-tooltip.ravenclaw .easter-tooltip-wand {
+  color: #4C6EF5;
+}
+
+.easter-tooltip.hufflepuff {
+  border-color: #F59E0B;
+}
+.easter-tooltip.hufflepuff .easter-tooltip-wand {
+  color: #F97316;
+}
+
+@media (max-width: 600px) {
+  .easter-tooltip { left: 24px; max-width: calc(100vw - 48px); }
+}
+
 .nav-links {
   display: flex;
   gap: 32px;
@@ -163,6 +235,75 @@ nav {
   margin-bottom: 14px;
 }
 
+/* hidden feature */
+#secret-dot {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+#secret-dot:hover {
+  color: #7B5EA7;
+}
+
+.star {
+  position: fixed;
+  top: 80px;
+  font-size: 10px;
+  color: #301934;
+  pointer-events: none;
+
+  animation: fall 2.2s ease forwards; /* longer */
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(120px) scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(180px) scale(0.95);
+    opacity: 0;
+  }
+}
+
+.secret-message {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  max-width: 260px;
+
+  font-size: 12px;
+  line-height: 1.5;
+
+  padding: 10px 14px;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #f3e8ff, #ede9fe);
+  color: #4c3a63;
+
+  border: 1px solid #d6bcfa;
+  box-shadow: 0 6px 18px rgba(123, 94, 167, 0.15);
+
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+  transition: all 0.3s ease;
+
+  pointer-events: none;
+}
+
+.secret-message.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+
 /* ── Bio paragraphs ── */
 .hero-bio {
   text-align: justify;
@@ -179,13 +320,58 @@ nav {
   color: var(--text);
 }
 
-/* Personal paragraph — Lora italic, slightly softer */
-.hero-bio--personal {
-  font-family: 'Lora', serif;
+/* ── BTS ARMY easter egg ── */
+#bts-army {
+  color: var(--muted);
+  font-weight: 400;
+  transition: color 0.2s ease, font-weight 0.2s ease, letter-spacing 0.2s ease;
+}
+
+#bts-army:hover,
+#bts-army.active {
+  color: #7B5EA7;
+  font-weight: 550;
+  letter-spacing: 0.02em; 
+}
+
+.bts-tooltip {
+  position: fixed;
+  z-index: 200;
+  background: var(--surface);
+  border: 1px solid #c9b8e8;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  max-width: 280px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.bts-tooltip.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.bts-tooltip-label {
+  font-size: 10px;
+  color: #9b7ec8;
+  opacity: 0.8;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+.bts-tooltip-text {
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 13.5px;
-  line-height: 1.8;
-  opacity: 0.9;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+.bts-tooltip-cite {
+  font-size: 10.5px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-top: 10px;
 }
 
 /* ── Quote blocks ── */
@@ -237,7 +423,7 @@ nav {
 
 .links-sub {
   display: block;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   color: var(--muted);
   opacity: 0.8;
   margin-bottom: 6px;
