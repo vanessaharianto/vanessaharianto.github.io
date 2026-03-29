@@ -6,13 +6,13 @@
   <title>Vanessa Elizabeth Harianto</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav>
-    <span class="nav-name">V.</span>
+    <span class="nav-name" id="nav-easter-egg" style="cursor: pointer;">V.</span>
     <div class="nav-links">
       <a href="#" class="nav-link active" data-page="home">home</a>
       <a href="#" class="nav-link" data-page="publications">publications</a>
@@ -23,6 +23,8 @@
 
   <!-- HOME -->
   <main id="pg-home" class="page active">
+
+    <!-- HERO -->
     <div class="hero">
       <div class="avatar-wrap">
         <img src="photo.jpeg" alt="Vanessa" class="avatar" id="avatar-img"
@@ -30,62 +32,84 @@
         <div class="avatar-fallback" id="avatar-fallback">V</div>
       </div>
       <div class="hero-text">
-        <h1 class="hero-name">Vanessa</h1>
-        <p class="hero-role">Undergraduate Researcher &mdash; <em>BINUS University</em></p>
-        <p class="hero-bio">
-          I am a <strong>final-year undergraduate at BINUS University, Indonesia</strong>, majoring in Information Systems
-          and Management. My work focuses on <strong>applying machine learning and natural language processing</strong> to
-          real-world datasets and problem settings, particularly in public sector and large-scale
-          data contexts. I am interested in building data-driven systems that are both practical and socially relevant.
-        </p>
-        <p class="hero-bio">
-          My research has primarily explored <strong>Natural Language Processing</strong>, including sentiment analysis,
-          topic modeling, and predictive systems, with applications such as public service optimization and
-          user behavior analysis. More recently, I have begun investigating <strong>Human Activity Recognition (HAR)</strong>,
-          exploring how language model–based approaches can be extended to time-series and sensor data.
-        </p>
-        <p class="hero-bio">
-          I am particularly interested in understanding human behavior across different data modalities,
-          bridging techniques from NLP and sequence modeling to develop more generalizable and context-aware systems.
-        </p>
-        <p class="hero-bio">
-          Outside of research, I enjoy films, books, food, Formula 1, music, travel, and photography.
-          I like capturing small, everyday moments through photos, and when I’m not glued to my screen,
-          you'll find me wrapped in a blanket, watching a film, reading a book, or happily eating mangoes.
-        </p>
-
-        <div class="cv-section">
-          <span class="links-label">CV</span>
-          <a href="vanessaharianto_cv.pdf" target="_blank" class="pill">Download CV</a>
-        </div>
-
-
-        <div class="links-section">
-          <span class="links-label">find me elsewhere</span>
-
-          <!-- PROFESSIONAL -->
-          <div class="links-group">
-            <span class="links-sub">professional</span>
-            <div class="links-row">
-              <a href="https://linkedin.com/in/vanessaharianto" target="_blank" class="pill">LinkedIn</a>
-              <a href="https://github.com/vanessaharianto" target="_blank" class="pill">GitHub</a>
-              <a href="https://www.researchgate.net/profile/Vanessa-Harianto" target="_blank" class="pill">ResearchGate</a>
-              <a href="https://scholar.google.com/citations?user=ISolQSQAAAAJ&hl=en" target="_blank" class="pill">Scholar</a>
-            </div>
-          </div>
-
-          <!-- PERSONAL / FUN -->
-          <div class="links-group">
-            <span class="links-sub">outside research</span>
-            <div class="links-row">
-              <a href="https://letterboxd.com/mango_slushee" target="_blank" class="pill">Letterboxd</a>
-              <a href="https://www.serializd.com/user/mangoslushee" target="_blank" class="pill">Serializd</a>
-              <a href="https://www.goodreads.com/user/show/199028412" target="_blank" class="pill">Goodreads</a>
-            </div>
-          </div>
-        </div>
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">
+          Vanessa<span id="secret-dot">.</span>
+        </h1>
+        <p class="hero-role">Undergraduate Researcher &mdash; <em>BINUS University, Indonesia</em></p>
       </div>
     </div>
+
+    <!-- ABOUT -->
+    <section class="home-section">
+      <span class="section-label">about</span>
+      <p class="hero-bio">
+        I am a <strong>final-year undergraduate at BINUS University, Indonesia</strong>, majoring in Information Systems
+        and Management. My work focuses on <strong>applying machine learning and natural language processing</strong> to
+        real-world datasets and problem settings, particularly in public sector and large-scale
+        data contexts. I am interested in building data-driven systems that are both practical and socially relevant.
+      </p>
+      <p class="hero-bio">
+        My research has primarily explored <strong>Natural Language Processing</strong>, including sentiment analysis,
+        topic modeling, and predictive systems, with applications such as public service optimization and
+        user behavior analysis. More recently, I have begun exploring <strong>Human Activity Recognition (HAR)</strong>,
+        exploring how language model&ndash;based approaches can be extended to time-series and sensor data.
+      </p>
+      <p class="hero-bio">
+        I am particularly interested in understanding human behavior across different data modalities,
+        bridging techniques from NLP and sequence modeling to develop more generalizable and context-aware systems.
+      </p>
+      <p class="hero-bio">
+        Outside of research, I enjoy films, books, food, <span id="f1-trigger" style="cursor: pointer;">Formula 1</span>,
+        music, travel, and photography. I like capturing small, everyday moments through photos, and when I'm not glued to my screen,
+        you'll find me wrapped in a blanket, watching a film, reading a book, fangirling over BTS (yes, I'm a hardcore
+        <span id="bts-army" style="cursor: pointer;"> ARMY</span> <3)
+        or happily eating <span id="mango-trigger" style="cursor: pointer;">mangoes</span>.
+      </p>
+    </section>
+
+    <!-- QUOTE 1 -->
+    <blockquote class="quote-block">
+      <p class="quote-text">&ldquo;Words are, in my not&#8209;so&#8209;humble opinion, our most inexhaustible source of magic.&rdquo;</p>
+      <cite class="quote-cite">&mdash; A. P. W. B. Dumbledore</cite>
+    </blockquote>
+
+    <!-- CV -->
+    <section class="home-section">
+      <span class="section-label">CV</span>
+      <a href="vanessaharianto_cv.pdf" target="_blank" class="pill">Download CV</a>
+    </section>
+
+    <!-- LINKS -->
+    <section class="home-section">
+      <span class="section-label">find me elsewhere</span>
+
+      <div class="links-group">
+        <span class="links-sub">professional</span>
+        <div class="links-row">
+          <a href="https://linkedin.com/in/vanessaharianto" target="_blank" class="pill">LinkedIn</a>
+          <a href="https://github.com/vanessaharianto" target="_blank" class="pill">GitHub</a>
+          <a href="https://www.researchgate.net/profile/Vanessa-Harianto" target="_blank" class="pill">ResearchGate</a>
+          <a href="https://scholar.google.com/citations?user=ISolQSQAAAAJ&hl=en" target="_blank" class="pill">Scholar</a>
+        </div>
+      </div>
+
+      <div class="links-group">
+        <span class="links-sub">outside research</span>
+        <div class="links-row">
+          <a href="https://letterboxd.com/mango_slushee" target="_blank" class="pill">Letterboxd</a>
+          <a href="https://www.serializd.com/user/mangoslushee" target="_blank" class="pill">Serializd</a>
+          <a href="https://www.goodreads.com/user/show/199028412" target="_blank" class="pill">Goodreads</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE 2 -->
+    <blockquote class="quote-block quote-block--right">
+      <p class="quote-text">&ldquo;The most important thing is to never stop questioning.&rdquo;</p>
+      <cite class="quote-cite">&mdash; Albert Einstein</cite>
+    </blockquote>
+
   </main>
 
   <!-- PUBLICATIONS -->
@@ -105,7 +129,7 @@
         <div class="pub-year">2026</div>
         <div class="pub-body">
           <div class="pub-title">Leveraging Historical Performance Data to Improve Response Times in Multi-Channel E-Government Complaint Systems</div>
-          <div class="pub-meta">Evaristus Didik Madyatmadja, <strong>Vanessa Elizabeth Harianto</strong>, Daffa Farras Putra Tarigan &middot; IEEE ICECCO 2026 &middot; To appear</div>
+          <div class="pub-meta">Evaristus Didik Madyatmadja, <strong>Vanessa Elizabeth Harianto</strong>, Daffa Farras Putra Tarigan &middot; IEEE ICECCO 2026</div>
           <div class="pub-tags">
             <span class="tag">predictive analytics</span>
             <span class="tag">e-government</span>
@@ -114,7 +138,7 @@
             <span class="tag">complaint management</span>
           </div>
           <div class="pub-links">
-            <!-- to be updated -->
+            <span class="pub-upcoming">To appear</span>
           </div>
         </div>
       </div>
@@ -172,25 +196,10 @@
         </div>
       </div>
 
-      <div class="pub-card" data-type="publication">
-        <div class="pub-year">2025</div>
-        <div class="pub-body">
-          <div class="pub-title">Market Segmentation Analysis for Local Beauty Brands Using Clustering Techniques</div>
-          <div class="pub-meta">Anonymous Authors &middot; In submission</div>
-          <div class="pub-tags">
-            <span class="tag">market segmentation</span>
-            <span class="tag">clustering</span>
-            <span class="tag">business analytics</span>
-          </div>
-          <div class="pub-links">
-          </div>
-        </div>
-      </div>
-      
       <div class="pub-card" data-type="other">
         <div class="pub-year">2026</div>
         <div class="pub-body">
-          <div class="pub-title">Indonesia’s Economy: Unlocking Opportunities in Emerging Markets</div>
+          <div class="pub-title">Indonesia's Economy: Unlocking Opportunities in Emerging Markets</div>
           <div class="pub-meta">
             Haryadi Sarjono, Ekanaka Hasudungan Pratama, <strong>Vanessa Elizabeth Harianto</strong>, Boyke Setiawan Soeratin
             &middot; Golden Ratio of Finance Management &middot; January 2026
@@ -212,9 +221,7 @@
   <!-- UPDATES -->
   <main id="pg-updates" class="page">
     <h2 class="page-title">Updates</h2>
-    <p class="contact-intro">
-      A few recent milestones and things I’ve been working on.
-    </p>
+    <p class="contact-intro">A few recent milestones and things I've been working on.</p>
 
     <div class="updates-list">
 
@@ -233,18 +240,16 @@
             <span class="update-tag">coursework</span>
           </div>
           <div class="update-desc">
-            Explored Indonesia’s economic development as an emerging market, focusing on
+            Explored Indonesia's economic development as an emerging market, focusing on
             growth trends, foreign investment, and structural challenges over the past decade.
           </div>
         </div>
-      </div>    
+      </div>
 
       <div class="update-item">
         <div class="update-date">Aug 2025</div>
         <div class="update-text">
-          <div class="update-title">
-            Paper published at <em>IEEE ICCIT</em>
-          </div>
+          <div class="update-title">Paper published at <em>IEEE ICCIT</em></div>
           <div class="update-desc">
             Examined public sentiment on Transjakarta services through Google Play reviews,
             identifying key issues in service quality, punctuality, and user satisfaction.
@@ -255,11 +260,9 @@
       <div class="update-item">
         <div class="update-date">Aug 2025</div>
         <div class="update-text">
-          <div class="update-title">
-            Paper published at <em>IEEE ICCIT</em>
-          </div>
+          <div class="update-title">Paper published at <em>IEEE ICCIT</em></div>
           <div class="update-desc">
-            Analyzed user reviews from the GOJEK application using SVM, Naïve Bayes, and Random Forest
+            Analyzed user reviews from the GOJEK application using SVM, Na&iuml;ve Bayes, and Random Forest
             to compare model performance and uncover key user sentiment patterns.
           </div>
         </div>
@@ -268,9 +271,7 @@
       <div class="update-item">
         <div class="update-date">Jan 2025</div>
         <div class="update-text">
-          <div class="update-title">
-            Paper published at <em>IEEE ICoCSETI</em>
-          </div>
+          <div class="update-title">Paper published at <em>IEEE ICoCSETI</em></div>
           <div class="update-desc">
             Work on environmental sustainability using K-Means clustering and LDA for social media analysis.
           </div>
@@ -283,7 +284,7 @@
   <!-- CONTACT -->
   <main id="pg-contact" class="page">
     <h2 class="page-title">Contact</h2>
-    <p class="contact-intro">Feel free to reach out — whether it's about research, collaboration, or just to say hello.</p>
+    <p class="contact-intro">Let's connect! Feel free to reach out — whether it's about research, collaboration, or just to say hello :)</p>
 
     <div class="contact-grid">
       <a href="mailto:vanessaelizabeth910@gmail.com" class="contact-card">
