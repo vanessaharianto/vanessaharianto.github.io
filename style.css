@@ -411,6 +411,81 @@ nav {
   opacity: 0.7;
 }
 
+
+/* ── F1 easter egg ── */
+#f1-trigger {
+  color: var(--muted);
+  font-weight: 300;
+  transition: color 0.2s ease, font-weight 0.2s ease, letter-spacing 0.2s ease;
+}
+#f1-trigger:hover,
+#f1-trigger.active {
+  color: #e10600;
+  font-weight: 350;
+  letter-spacing: 0.02em;
+}
+
+.f1-tooltip {
+  position: fixed;
+  z-index: 200;
+  background: var(--surface);
+  border: 1px solid #f5c6c6;
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  max-width: 300px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.f1-tooltip.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.f1-tooltip-label {
+  font-size: 10px;
+  color: #e10600;
+  opacity: 0.8;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+.f1-tooltip-text {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+.f1-tooltip-cite {
+  font-size: 10.5px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-top: 10px;
+}
+
+/* ── Mango easter egg ── */
+#mango-trigger {
+  transition: color 0.2s ease;
+}
+#mango-trigger:hover {
+  color: #e07b00;
+}
+
+.mango {
+  position: fixed;
+  top: -40px;
+  font-size: 22px;
+  pointer-events: none;
+  animation: mangoFall 1.8s ease-in forwards;
+  z-index: 9999;
+}
+
+@keyframes mangoFall {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
 /* ── CV & links ── */
 .cv-section {
   margin: 12px 0 18px;

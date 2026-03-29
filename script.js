@@ -290,3 +290,106 @@ dot.addEventListener("click", () => {
 
   if (clickCount >= 30) return;
 });
+
+// ── F1 easter egg ──
+const f1Quotes = [
+  { text: "To finish first, first you have to finish.", cite: "— Jenson Button (& others)" },
+  { text: "I am not designed to finish second or third. I am designed to win.", cite: "— Ayrton Senna" },
+  { text: "This is ridiculous. RIDICULOUS.", cite: "— Sebastian Vettel" },
+  { text: "I'm literally driving a boat out here.", cite: "— Max Verstappen" },
+  { text: "Bwoah.", cite: "— Kimi Räikkönen, every interview ever" },
+  { text: "Leave me alone, I know what I'm doing.", cite: "— Kimi Räikkönen" },
+  { text: "The most I can do is give 110% every time I get in the car.", cite: "— Lewis Hamilton" },
+  { text: "Still I rise.", cite: "— Lewis Hamilton" },
+  { text: "It's lights out and away we go!", cite: "— David Croft" },
+
+  { text: "I have the seat full of water. / Must be the water. / Let's add that to the words of wisdom.", cite: "— Charles Leclerc & Bryan Bozzi" },
+  { text: "This is like a mushroom in Mario Kart.", cite: "— Charles Leclerc" },
+  { text: "I'm hanging here like a cow.", cite: "— Charles Leclerc" },
+
+  { text: "Have a tea break while you're at it! Come on!", cite: "— Lewis Hamilton" },
+  { text: "You want me to just sit here the whole race?", cite: "— Lewis Hamilton" },
+
+  { text: "Red, red, red, red!", cite: "— George Russell" },
+  { text: "Ah, I was just checking.", cite: "— George Russell, after asking if he should let a McLaren pass, Mexico 2025" },
+
+  { text: "'He's too young. He needs experience. Look at the mistakes he makes.' Here we go, Kimi. Victory.", cite: "— Toto Wolff to Antonelli, China 2026" },
+
+  { text: "What are we doing? Racing or ping pong?", cite: "— Sebastian Vettel" },
+
+  { text: "Holy mac 'n' cheese balls!", cite: "— Daniel Ricciardo" },
+  { text: "And for anyone who thought I left… I never left. Just moved aside for a while.", cite: "— Daniel Ricciardo" },
+
+  { text: "Yabba dabba doo!", cite: "— George Russell" },
+
+];
+
+let f1Index = Math.floor(Math.random() * f1Quotes.length);
+let f1TooltipTimeout = null;
+
+const f1Trigger = document.getElementById('f1-trigger');
+
+const f1Tooltip = document.createElement('div');
+f1Tooltip.className = 'f1-tooltip';
+f1Tooltip.innerHTML = `
+  <div class="f1-tooltip-label">🏎 team radio</div>
+  <div class="f1-tooltip-text"></div>
+  <div class="f1-tooltip-cite"></div>
+`;
+document.body.appendChild(f1Tooltip);
+
+const f1Text = f1Tooltip.querySelector('.f1-tooltip-text');
+const f1Cite = f1Tooltip.querySelector('.f1-tooltip-cite');
+
+function showF1Tooltip() {
+  const q = f1Quotes[f1Index % f1Quotes.length];
+  f1Index++;
+  f1Text.textContent = `"${q.text}"`;
+  f1Cite.textContent = q.cite;
+
+  const rect = f1Trigger.getBoundingClientRect();
+  f1Tooltip.style.top = (rect.bottom + 10) + 'px';
+  f1Tooltip.style.left = Math.min(rect.left, window.innerWidth - 320) + 'px';
+
+  f1Tooltip.classList.add('show');
+  f1Trigger.classList.add('active');
+  clearTimeout(f1TooltipTimeout);
+  f1TooltipTimeout = setTimeout(hideF1Tooltip, 4500);
+}
+
+function hideF1Tooltip() {
+  f1Tooltip.classList.remove('show');
+  f1Trigger.classList.remove('active');
+}
+
+if (f1Trigger) {
+  f1Trigger.addEventListener('mouseenter', showF1Tooltip);
+  f1Trigger.addEventListener('mouseleave', () => {
+    clearTimeout(f1TooltipTimeout);
+    f1TooltipTimeout = setTimeout(hideF1Tooltip, 400);
+  });
+  f1Trigger.addEventListener('click', showF1Tooltip);
+}
+
+// ── Mango easter egg ──
+const mangoTrigger = document.getElementById('mango-trigger');
+
+function spawnMangoes() {
+  const count = 8 + Math.floor(Math.random() * 6);
+  for (let i = 0; i < count; i++) {
+    setTimeout(() => {
+      const m = document.createElement('div');
+      m.className = 'mango';
+      m.textContent = '🥭';
+      m.style.left = (Math.random() * 90) + 'vw';
+      m.style.fontSize = (16 + Math.random() * 18) + 'px';
+      m.style.animationDuration = (1.4 + Math.random() * 1.2) + 's';
+      document.body.appendChild(m);
+      setTimeout(() => m.remove(), 3000);
+    }, i * 80);
+  }
+}
+
+if (mangoTrigger) {
+  mangoTrigger.addEventListener('click', spawnMangoes);
+}
